@@ -1,1 +1,1 @@
-# ementor_extension
+AI Coding Mentor is a browser extension designed to help programmers when they get stuck while solving coding problems. Instead of directly providing the complete solution, it gives progressive hints, explains mistakes, and guides users toward the right approach, making problem-solving more interactive while encouraging independent thinking and learning.
