@@ -1,0 +1,33 @@
+{
+    "manifest_version" : 3,
+
+    "name" : "EMentor" ,
+
+    "version" : "1.0" ,
+
+    "description" : " An AI mentor for coding assistance" , 
+
+    "action" : {
+        "default_popup" : "popup.html"
+    },
+
+    "background" : {
+        "service_worker" : "service_worker.js"
+    }, 
+
+    "content_scripts" : [
+        {
+            "matches" : ["<all_urls>"],
+            "js" : ["content.js"]
+        }
+    ],
+
+    "permissions": ["storage" , "tabs"],
+
+    "host_permissions": ["https://leetcode.com/*"],
+
+    "icons": {
+        "16": "icon.png"
+    }
+
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coding Mentor</title>
+    <link rel="stylesheet" href="styles/popup.css">
+</head>
+
+<body>
+
+    <div class="popup-container">
+
+        <header class="header">
+            <div class="brand">
+                <div class="logo">🧠</div>
+
+                <div class="brand-info">
+                    <div class="brand-title">
+                        <h1>AI Coding Mentor</h1>
+                        <span class="beta">BETA</span>
+                    </div>
+
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        <span>Ready to help</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="intro">
+                <h2>What do you need?</h2>
+                <p>Get help with the problem you're solving.</p>
+            </section>
+
+            <section class="actions">
+
+                <button class="action-card analyze-button" data-action="analyze">
+                    <div class="action-icon blue">⌕</div>
+
+                    <div class="action-content">
+                        <strong>Analyze</strong>
+                        <small>Review your code</small>
+                    </div>
+
+                    <span class="action-arrow">→</span>
+                </button>
+
+                <button class="action-card" id="hintButton" data-action="hint">
+                    <div class="action-icon yellow">💡</div>
+
+                    <div class="action-content">
+                        <strong>Hint</strong>
+                        <small>Get guidance without the solution</small>
+                    </div>
+
+                    <span class="action-arrow">→</span>
+                </button>
+
+                <button class="action-card" id="askButton" data-action="ask">
+                    <div class="action-icon purple">?</div>
+
+                    <div class="action-content">
+                        <strong>Ask</strong>
+                        <small>Ask about the problem or your code</small>
+                    </div>
+
+                    <span class="action-arrow">→</span>
+                </button>
+
+            </section>
+
+            <!-- Previous Analysis -->
+            <section class="history-section">
+                <button class="history-button" id="previousAnalysisButton">
+                    📜 View Previous Interaction
+                </button>
+            </section>
+
+            <section class="ask-section" id="askSection" hidden>
+
+                <label for="questionInput">Your question</label>
+
+                <textarea
+                    id="questionInput"
+                    placeholder="e.g. Why is my approach giving TLE?"
+                    rows="4">
+                </textarea>
+
+                <button class="send-button" id="sendAskButton">
+                    Ask Mentor
+                </button>
+
+            </section>
+
+            <section class="response-section" id="responseSection" hidden>
+
+                <div class="response-header">
+                    <span id="responseTitle">AI RESPONSE</span>
+
+                    <button
+                        id="closeResponseButton"
+                        aria-label="Close response">
+                        ×
+                    </button>
+                </div>
+
+                <div
+                    class="response-content"
+                    id="responseContent">
+                </div>
+
+            </section>
+
+            <div class="loading" id="loading" hidden>
+                <span class="spinner"></span>
+                <span>Analyzing...</span>
+            </div>
+
+            <div
+                class="error-message"
+                id="errorMessage"
+                hidden>
+            </div>
+
+        </main>
+
+    </div>
+
+    <script src="scripts/popup.js"></script>
+
+</body>
+
+</html>
